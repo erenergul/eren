@@ -184,7 +184,6 @@
                             <span class="site-menu-title">Anasayfa</span>
                         </a>
                     </li>
-
                     <li class="site-menu-item ">
                         <a class="animsition-link" href="{{route('rezervasyon.index')}}">
                             <span class="site-menu-title">Rezervasyonlar</span>
