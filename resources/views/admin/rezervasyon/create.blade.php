@@ -68,16 +68,16 @@
                                     {!! Form::label  ('otel_id' ,'Otel Adı') !!}
                                     {{ Form::select('otel_id',$otel,null,['id'=>'otel','required','class' => 'form-control' , 'required']) }}
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-1">
                                 {!! Form::label ('rezervasyon_oda_no' ,'Oda No') !!}
-                                {!! Form::text('rezervasyon_oda_no',null ,['placeholder' => 'Oda Numarasını Giriniz','class' => 'form-control']) !!}
-                            </div>
-                            <div class="col-md-4"></div>
-                            <div class="form-group col-md-4">
-                                {!! Form::label ('rezervasyon_no' ,'Bilet No') !!}
-                                {!! Form::text('rezervasyon_no',null ,['placeholder' => 'Telefon Numarasını Giriniz','class' => 'form-control','required']) !!}
+                                {!! Form::text('rezervasyon_oda_no',null ,['placeholder' => 'Oda No','class' => 'form-control']) !!}
                             </div>
 
+                            <div class="form-group col-md-3">
+                                {!! Form::label ('rezervasyon_no' ,'Bilet No') !!}
+                                {!! Form::text('rezervasyon_no',null ,['placeholder' => 'Bilet Numarasını Giriniz','class' => 'form-control','required']) !!}
+                            </div>
+                            <div class="col-md-4"></div>
                             <div class="form-group col-md-4">
                                 <label for="title">Alınış Yeri:</label>
                                 <select name="alinis_id" id="alinis" class="form-control" required>
@@ -86,12 +86,12 @@
 
                                 </select>
                             </div>
-                            <div class="col-md-4"></div>
                             <div class="form-group col-md-4">
                                 {!! Form::label ('rehber_id' ,'Rehber Adı') !!}
                                 {{ Form::select('rehber_id',$rehberler, null,['placeholder' => 'Rehber Seç' ,'class' => 'form-control','required']) }}
                             </div>
                             <div class="col-md-8"></div>
+                            <div class="col-md-4"></div>
                             <div class="form-group col-md-1">
                                 {!! Form::label ('rezervasyon_toplam_satis' ,'Satış Fiyatı') !!}
                                 {!! Form::text('rezervasyon_toplam_satis',null ,['class' => 'form-control','required']) !!}
@@ -185,7 +185,6 @@
 
     <script>
         $("#otel").select2({
-
         })
 
     </script>

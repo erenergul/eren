@@ -49,10 +49,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/rezervasyon/destroy/{id}', 'RezervasyonlarController@destroy');
     Route::get('/admin/rezervasyon/detay/{id}', 'RezervasyonlarController@detay');
 
-
-    Route::get('/select2-remote-data-source', 'SearchController@select2RemoteDataSource');
-    Route::get('/select2-load-more', 'SearchController@select2LoadMore');
-
     Route::get('admin/transfer', 'TransferlerController@index')->name('transfer.index');
     Route::get('/admin/transfer/create','TransferlerController@create')->name('transfer.create');
     Route::post('/admin/transfer/create','TransferlerController@store');
@@ -83,19 +79,15 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin/cari/excel/{id}', 'cariController@excelOutID');
 
 
-    Route::get('/admin/odeme/ekle', 'odemeController@ekleForm');
+    Route::get('/admin/odeme/ekle', 'odemeController@ekleForm')->name('odeme.index');
     Route::post('/admin/odeme/ekle', 'odemeController@eklePost');
     Route::get('/admin/odeme/duzenle/{id}', 'odemeController@duzenleForm');
     Route::post('/admin/odeme/duzenle/{id}', 'odemeController@duzenlePost');
-
-
-
-
 
     Route::resource('admin/takvim/events', 'EventsController',['only' => ['index','store']]);
 
     Route::get('admin/takvim', function () {
         return view('admin.takvim.index');
-    });
+    })->name('takvim.index');
 
 });

@@ -203,6 +203,11 @@
                         </a>
                     </li>
                     <li class="site-menu-item ">
+                        <a class="animsition-link" href="{{route('odeme.index')}}">
+                            <span class="site-menu-title">Ödemeler</span>
+                        </a>
+                    </li>
+                    <li class="site-menu-item ">
                         <a class="animsition-link" href="{{route('rehber.index')}}">
                             <span class="site-menu-title">Rehber Ekle</span>
                         </a>
@@ -223,7 +228,7 @@
                         </a>
                     </li>
                     <li class="site-menu-item ">
-                        <a class="animsition-link" href="">
+                        <a class="animsition-link" href="{{route('takvim.index')}}">
                             <span class="site-menu-title">Hatırlatma / Takvim</span>
                         </a>
                     </li>
